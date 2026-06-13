@@ -6,7 +6,7 @@ import { useAuth }             from "@/contexts/AuthContext";
 import { COMPANY }             from "@/config/company.config";
 
 export default function CadastroPage() {
-  const { signUp, loginWithGoogle, isAuthenticated, loading, error, setError } = useAuth();
+  const { signUp, isAuthenticated, loading, error, setError } = useAuth();
   const router = useRouter();
 
   const [name,       setName]       = useState("");
@@ -152,32 +152,6 @@ export default function CadastroPage() {
                   <span className="spinner-sm" /> Criando conta...
                 </span>
               ) : "Criar Conta"}
-            </button>
-
-            <div style={{ display: "flex", alignItems: "center", gap: 8, margin: "16px 0" }}>
-              <div style={{ flex: 1, height: 1, backgroundColor: "var(--border-color)" }} />
-              <span style={{ fontSize: "0.75rem", color: "var(--text-muted)", textTransform: "uppercase" }}>ou</span>
-              <div style={{ flex: 1, height: 1, backgroundColor: "var(--border-color)" }} />
-            </div>
-
-            <button
-              type="button"
-              className="btn w-full"
-              style={{
-                backgroundColor: "#fff",
-                color: "#333",
-                border: "1px solid #ddd",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                gap: 8,
-                marginBottom: 12
-              }}
-              onClick={loginWithGoogle}
-              disabled={submitting}
-            >
-              <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google" style={{ width: 18, height: 18 }} />
-              Cadastrar com Google
             </button>
 
             <div style={{ marginTop: 16, textAlign: "center", fontSize: "0.85rem" }}>

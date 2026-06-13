@@ -1,7 +1,7 @@
 
 # Morada Mineira - Sistema de Gestão de Tarefas
 
-## 🚀 Guia de Implantação
+## Guia de Implantação
 
 Este projeto utiliza **Next.js** e **Supabase**. Siga os passos abaixo para rodar o ambiente localmente.
 
